@@ -18,9 +18,12 @@ public class MainApp {
 
 
         Integer sum = numbers.stream()
-                .mapToInt(Integer::intValue)
-                .sum();
+                .reduce(0,(a,b)->a+b);
         System.out.println(sum);
+
+        Integer product = numbers.stream()
+                .reduce(1,(a,b)->a*b);
+        System.out.println(product);
 
     }
 
